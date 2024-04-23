@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        let answer1 = "It's alright";
+        let answer2 = "he is called 'Johnny'";
+        let answer3 = 'He is called "johnny"';
+
+        document.getElementById("demo1").innerHTML = answer1 + "<br>" + answer2 + "<br>" + answer3;
+    
+        // 템플릿 문자열 → 인터넷 익스플로어에서는 반응하지 않는다.
+        //흩따옴표 또는 쌍따옴표를 둘다 데이터로 사용시 백틱(`)으로 감싼다.
+        let text = `He's often called "johnny"`; 
+
+        document.getElementById("demo2").innerHTML = text;
+    </script>
+</body>
+</html>

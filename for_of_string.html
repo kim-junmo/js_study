@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript For Of Loop</h2>
+
+<p>The for of statement loops through the values of an iterable object.</p>
+
+<p id="demo"></p>
+
+<script>
+let language = "JavaScript";
+
+let text = "";
+// x변수에 문자 1개씩 저장되어, for문이 반복된다.
+for (let x of language) {
+  text += x + "<br>";
+}
+
+window.document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>

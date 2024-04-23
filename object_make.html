@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Object 속성과 메서드 구성하기</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        //자바스크립트의 object은 스프링과 연관된 작업이 존재한다.
+        //object객체 생성 
+        // fristname~id까지가 속성
+        const person = {
+            fristName : "홍",
+            lastName : "길동",
+            id : 5566,  
+            fullName : function() {  // 익명함수. 
+                return this.fristName + " " + this.lastName; //this.을 사용하면 속성에 접근 할 수 있음
+            }
+        };
+
+        document.getElementById("demo").innerHTML = person.fullName();
+    </script>
+</body>
+</html>

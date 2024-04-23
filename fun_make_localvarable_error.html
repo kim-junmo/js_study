@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>함수안의 지역변수(Local Variable)</h3>
+
+    <p id ="demo1"></p>
+    <p id ="demo2"></p>
+
+    <script>
+
+        let text = "함수내부의 변수 호출 : " + carName; //carName이 인식이 안됨
+        document.getElementById("demo1").innerHTML = text;
+
+
+        function myfunction() {
+            // 지역변수 : 함수 내부에서 선언한 변수는 함수에서 벗어난 위치에서 사용 불가능.
+            let carName = "volov";
+
+        document.getElementById("demo2").innerHTML = carName;
+
+        }
+
+        myfunction();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>문자열 사용하는 방법</h3>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    <script>
+        let x = "John"; //권장하는 방법
+
+        let y = new String("John") //object 데이터 , 권장 X
+
+        document.getElementById("demo").innerHTML = typeof x;
+        document.getElementById("demo2").innerHTML = typeof y;
+        document.getElementById("demo3").innerHTML = (x == y); // 값만 비교하여 동일할 때 true
+        document.getElementById("demo4").innerHTML = (x === y); //값 그리고 타입이 동일할때 true
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The push() Method</h2>
+
+<p>The push method appends a new element to an array.</p>
+
+<button onclick="myFunction()">Try it</button> 
+<!--클릭하게 되면 마이펀션이 불러와짐-->
+<p id="demo"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+    //인덱스가 없는 배열요소에 값을 저장하게 되면, 배열이 추가된다
+  fruits.push("Lemon"); //인덱스 3
+  document.getElementById("demo").innerHTML = fruits;
+}
+</script>
+
+</body>
+</html>

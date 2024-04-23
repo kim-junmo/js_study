@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>settimeout() 메서드 사용</h2>
+    <p>일정시간이 경과 후에 코드를 동작 시킬때 사용</p>
+
+    <button onclick="setTimeout(myFunction, 3000)">클릭</button>
+    <p id="demo"></p>
+
+    <script>
+        //버튼을 클릭 시 3초(3000 milisecond) 경과 후 1회 동작이 된다. (1회성)
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "안녕하세요";
+        }
+    </script>
+</body>
+</html>

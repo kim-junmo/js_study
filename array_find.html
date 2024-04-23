@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>배열 - find()매서드 사용</h2>
+    <p id="demo"></p>
+
+    <script>
+        const numbers = [4, 9, 16, 25, 29];
+        let first = numbers.find(myFunction);
+
+        document.getElementById("demo").innerHTML = "숫자 18보다 첫번째로 오는 큰 값은?" + first;
+
+        function myFunction(value, index, obj) {
+            return value > 18;
+        } //find는 조건을 만들어야 됨 조건이 만족이 되면 첫번째로 만족이 된 값을 가지고 옴
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Confirm()메서드 : 선택여부 확인</h2>
+    <button onclick="del()">삭제</button>
+    <p id="demo"></p>
+
+    <script>
+        function del() {
+            let text = ""
+
+            if(window.confirm("1번 게시물을 삭제하시겠습니까?")) {
+                txt = "삭제를 진행합니다.";
+            }else {
+                txt = "삭제가 취소되었습니다.";
+            }
+            document.getElementById("demo").innerHTML = txt;
+    }
+    </script>
+</body>
+</html>

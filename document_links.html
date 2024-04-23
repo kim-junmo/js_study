@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Finding HTML Elements Using document.links</h2>
+
+<p>
+<a href="/html/default.asp">HTML</a>
+<br>
+<a href="/css/default.asp">CSS</a>
+</p>
+
+<p id="demo"></p>
+
+<script>
+    // document.links : <a> 태그중에서 herf 속성을 가지고 있는 태그들을 참조.
+let element = document.links;
+document.getElementById("demo").innerHTML =
+"Number of links: " + element.length;
+
+//첫번째 <a href>태그 : element[0] or document.links[0]
+</script>
+
+</body>
+</html>

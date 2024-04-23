@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> 다중 조건식 : if ~ else if ~ else 문</h1>
+    <p id="demo"></p>
+
+    <script>
+        const time = new Date().getHours();
+        let greeting;
+
+        if(time < 10) {
+            greeting = "Good Morning";
+        } else if(time < 15) {
+            greeting = "Good Day 1";
+        } else if(time < 20) {
+            greeting = "Good Day 2";
+        } else {
+            greeting = "Good Evening";
+        }
+
+        document.getElementById("demo").innerHTML = greeting;
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+
+    </style>
+<script>
+function myFunction(x) {
+// x.style.background = "yellow";
+// css에서 background-color를 javascript에서는 backgroundColor로 변경, 
+//2번째 단어에 대문자를 사용, -를 사용하게 되면 오류가 발생하게 됨
+x.style.backgroundColor = "yellow"
+}
+function myFunction2(X) {
+    x.style.background = "white";
+}
+</script>
+</head>
+<body>
+<h1>JavaScript HTML Events</h1>
+<h2>The onfocus Attribute</h2>
+
+Enter your name: <input type="text" onfocus="myFunction(this)" onblur="myFunction2(this);">
+
+<p>When the input field gets focus, a function is triggered which changes the background-color.</p>
+
+</body>
+</html>

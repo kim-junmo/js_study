@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>반복문 : while문</h3>
+    <p>1~100까지 범위에서 3의 배수의 합을 출력하라</p>
+
+    <p id ="demo"></p>
+
+    <script>
+        // 변수가 숫자 데이터 용도로 사용하면, 초기값 0, 문자열 데이터 용도로 사용하며, "" 빈문자열을 초기값으로 준다.
+        let sum = 0;
+        
+        let i = 0;
+        while(i <= 100) {
+            if (i % 3 == 0) {
+                sum += i;
+            }
+            i++;
+        }
+
+        document.getElementById("demo").innerHTML = sum;
+
+    </script>
+</body>
+</html>

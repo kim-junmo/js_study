@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>배열 연습을 해보자</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        /*
+        const names = [""];
+        names [0] = "손흥민";
+        names [1] = "이강인";
+        names [2] = "김민재";
+        names [3] = "황희찬";
+
+        document.getElementById("demo").innerHTML = names;
+        */
+        
+        const names = [
+            "손흥민", 
+            "이강인", 
+            "김민재", 
+            "황희찬"
+        ];
+
+        //황의찬이 부상으로 선수변경
+        names[3] = "조규성";
+        
+        document.getElementById("demo").innerHTML = names;
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>== 비교 연산자</h2>
+    <p>문자열 데이타의 형변환</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        let x = 5;
+        //x == "5"  -> x == 5 변환. 타입 일치가 되어 비교가 진행된다
+        document.getElementById("demo1").innerHTML = x == "5";
+
+        // 값과 타일이 동일해야 true가 된다
+        document.getElementById("demo2"). innerHTML = x == "5";
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript HTML Events</h1>
+<h2>The onmousedown Attribute</h2>
+
+<!-- mousedown 은 마우스를 클릭하고 있는 상태이다. (즉 마우스 클릭을 누르고 마우스에서 손가락을 떼지않은 상태)
+click 은 말그래도 클릭을 하고 마우스에서 뗀 것 (말그대로 클릭) -->
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+Click Me</div>
+
+<hr>
+
+<div onmousedown="alert('down')" onclick="alert('click')"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+Click Me2</div>
+
+<script>
+function mDown(obj) {
+  obj.style.backgroundColor = "#1ec5e5";
+  obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+  obj.style.backgroundColor="#D94A38";
+  obj.innerHTML="Thank You";
+}
+</script>
+
+</body>
+</html> 

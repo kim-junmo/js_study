@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>논리연산자 &&, ||, !</h2>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        /*
+            && : 논리합. and
+            || : 논리곱. or
+            ! :부정 연산자. not
+        */
+
+        let x = true;
+        let y = false;
+
+        document.getElementById("demo1").innerHTML = true && true;
+        document.getElementById("demo2").innerHTML = true || false;
+        document.getElementById("demo3").innerHTML = !false;
+    </script>
+</body>
+</html>

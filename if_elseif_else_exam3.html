@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점수 매기기</title>
+</head>
+<body>
+    <p id="result">점수 작성</p>
+    <script>
+        /*
+        let jumsu = prompt("당신의 점수를 작성해주세요!");
+        let grade;
+        if (jumsu >= 90 && jumsu <= 100 ) {
+            grade = "A";
+        } else if (jumsu >= 80 && jumsu < 90) {
+            grade = "B";
+        } else if (jumsu >= 70 && jumsu < 80) {
+            grade = "C";
+        } else {
+            grade = "F";
+        }
+
+        document.getElementById("result").innerHTML = grade;
+        */
+
+        let jumsu = prompt("당신의 성적은?", "점수 입력해주세요")
+        let grade;
+
+        if (jumsu >= 90 && jumsu <= 100) {
+            grade = "A";
+        } else if(jumsu >= 80 && jumsu <= 89) {
+            grade = "B";
+        } else if(jumsu >= 70 && jumsu <= 79) {
+            grade = "C";
+        } else if(jumsu >= 0 && jumsu <= 69) {
+            grade = "F";
+        } else {
+            grade = "점수를 잘못 입력하셨습니다.";
+        }
+
+        document.getElementById("result").innerHTML = grade;
+    </script>
+</body>
+</html>

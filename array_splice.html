@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The splice() Method</h2>
+
+<p>The splice() method adds new elements to an array:</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits;
+
+//삭제를 하면서 삽입하는 기능
+//인덱스 2위치에서 0개를 삭제하고 그 위치에 레몬과 키위 데이터를 삽입하는 기능.
+fruits.splice(2, 2, "Lemon", "Kiwi");
+document.getElementById("demo2").innerHTML = fruits;
+</script>
+
+</body>
+</html>

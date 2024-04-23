@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h3>for문을 이용한 구구단 출력하기.</h3>
+
+    <script>
+
+        document.write("<table>");
+        for(let i=0; i<=9; i++) {
+            document.write("<tr>");
+            for(let j=2; j<=9; j++) {
+                if(i==0) {
+                    document.write("<td>" + j + "단" + "</td>");
+                    continue;
+                }
+                document.write("<td>" + j + "*" + i + "=" + (j*i) + "</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>아스키 코드, 유니코드 비교</h2>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    <script>
+        let text1 = "A"; //아스키 코드값 65
+        let text2 = "B"; // 아스키 코드 값 66
+
+        document.getElementById("demo1").innerHTML = text1<text2;
+
+        let text3 = "가"; //유니코드값
+        let text4 = "나"; //유니코드값
+
+        document.getElementById("demo2").innerHTML = text3<text4;
+
+        let text5 = "20" //아스키 코드 "2" 문자가 50
+        let text6 = "5" //아스키 코드 "5" 문자가 53
+        document.getElementById("demo3").innerHTML = text5<text6;
+        //숫자로 하면 fales
+
+        let text7 = 20;
+        let text8 = 5;
+        //숫자 대소 비교
+        document.getElementById("demo4").innerHTML = text7<text8;
+    </script>
+</body>
+</html>

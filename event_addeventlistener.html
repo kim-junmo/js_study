@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>이벤트 등록 : addEventListener() 메서드 이용</h2>
+    <p id="demo"></p>
+
+    <p>이벤트 등록 3가지 방법</p>
+    <button id="myBtn1" onclick="document.getElementById('demo').innerHTML = Date()">클릭1</button>
+    <button id="myBtn2">클릭2</button>
+    <button id="myBtn3">클릭3</button>
+
+    <script>
+        //속성을 이용 2번째 타입
+        document.getElementById("myBtn2").onclick = displayDatep1;
+
+        function displayDatep1() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+
+        //메서드 이용. addEventListener() : 이벤트 등록 / removeEventListener() : 이벤트 제거
+        document.getElementById("myBtn3").addEventListener("click", displayDate2)
+
+        function displayDate2 () {
+            document.getElementById("demo").innerHTML = Date();
+        }
+    </script>
+</body>
+</html>

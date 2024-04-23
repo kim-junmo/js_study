@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Math.random() 메서드</h2>
+    <p>0 ~ 10 미만의 실수값을 랜덤으로 반환</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // 0에서 9 범위의 정수값이 랜덤으로 확인됨.
+        let x = Math.floor(Math.random() * 10);
+        document.getElementById("demo").innerHTML = x;
+    </script>
+</body>
+</html>

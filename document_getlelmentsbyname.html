@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>자바스크립트 HTML DOM 기술</h2>
+    <p>태그명을 참조하는 메서드 : getElementsByTagName()</p>
+
+    <p id="demo"></p>
+
+    <script>
+        //document객체 : html 문서와 태그를 제어하기 위한 기능을 제공한다.
+        const element = document.getElementsByTagName("p") // 모든 p태그를 참조한다.
+        // element는 복수의 의미를 지니고 있어 p태그가 한개여도 복수로 사용해야됨
+
+
+        document.getElementById("demo").innerHTML = element[0].innerHTML;
+    </script>
+</body>
+</html>

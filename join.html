@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        body 
+            
+        
+        h1 {
+            width: 70%;
+            margin: auto;
+            text-align: center;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: auto;
+        }
+
+        tr {
+            height: 40px;
+        }
+
+        th {
+            text-align: left;
+            width: 15%;
+            padding: 5px 10px;
+            background-color: dimgray;
+            color: white;
+        }
+
+        td {
+            padding: 5px 10px;
+            width: 85%;
+        }
+
+        p.submit {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        input[type='text'], input[type='password'] {
+            padding: 5px;
+        }
+
+        select, input[type='button'] {
+            height: 29px;
+        }
+
+        input.btn {
+            height: 29px;
+        }
+    </style>
+</head>
+<body>
+    <h1>기본정보</h1>
+    <form>
+        <table>
+            <tr>
+                <th>이름</th>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <th>아이디</th>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td>
+                    <input type="password">
+                </td>
+            </tr>
+            <tr>
+                <th>비밀번호 확인</th>
+                <td>
+                    <input type="password">
+                </td>
+            </tr>
+            <tr>
+                <th>생년월일/성별</th>
+                <td>
+                    <input type="date">
+                    <input type="radio" name="gender">남자
+                    <input type="radio" name="gender">여자
+                </td>
+            </tr>
+            <tr>
+                <th>이메일</th>
+                <td>
+                    <p>
+                        <input type="text">@<input type="text">
+                        <select>
+                            <option>메일주소선택</option>
+                        </select>
+                        <input type="button" value="메일인증선택">
+                    </p>
+                    <p>
+                        <input type="text">
+                        <input type="button" value="인증확인">
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>연락처</th>
+                <td>
+                    <p>
+                        휴대전화 
+                        <select>
+                            <option>선택</option>
+                        </select>
+                        <input type="text">-<input type="text">
+                    </p>
+                    <p>
+                        일반전화 
+                        <select>
+                            <option>선택</option>
+                        </select>
+                        <input type="text">-<input type="text">
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>우편번호</th>
+                <td>
+                    <input type="text">
+                    <input type="button" value="주소검색">
+                </td>
+            </tr>
+            <tr>
+                <th>주소</th>
+                <td>
+                    <p>
+                        <input type="text">
+                    </p>
+                    <p>
+                        <input type="text">
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>정보수신 여부</th>
+                <td>
+                    서비스및 이벤트소식을 <input type="checkbox"> Email로 수신하겠습니다.
+                    <input type="checkbox"> SMS로 수신하겠습니다.
+
+                </td>
+            </tr>
+        </table>
+        <p class="submit">
+            <input class="btn" type="submit" value="전송">
+            <input class="btn" type="reset" value="취소">
+        </p>
+    </form>
+</body>
+</html>

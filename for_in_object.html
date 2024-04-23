@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>object 데이터 타입의 테이터를 순차적으로 읽어오는 구문.</h2>
+    <p id="demo"></p>
+
+    <script>
+        const person = {fname : "jonh", lname : "Doe", age:25 };
+        let text = "";
+        for(let x in person) {
+            text += person[x]; // 변수에서는 person의 key값이 존재하게 된다. key : fname, lname, age
+        }
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

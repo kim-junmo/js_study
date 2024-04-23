@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event_basic</title>
+    <script>
+        function timeinfo() {
+            document.getElementById('demo').innerHTML = Date();
+        }
+
+        function timeinfo2(obj) {
+            // 매개변수 obj : 30번째 줄 클릭한 button태그를 가리킴.
+            obj.innerHTML = Date();
+        }
+
+    </script>
+</head>
+<body>
+    <h2>event</h2>
+
+    <p id="demo"></p>
+
+    <button onclick="alert('이벤트 연습');">메세지</button>
+
+    <button onclick="document.getElementById('demo').innerHTML = Date();">현재 시간은?</button>
+
+    <button onclick="this.innerHTML = Date();">현재 시간은?</button>
+
+    <button onclick="timeinfo2(this);">현재 시간은?</button>
+
+    <button onclick="timeinfo()">현재 시간은?</button>
+</body>
+</html>

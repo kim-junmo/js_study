@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>for문을 이용한 배열(Array) 작업</h2>
+    <p id="demo"></p>
+
+    <script>
+        const fruits = ["바나나", "오랜지", "사과", "망고"];
+        let fLen = fruits.length; // 4
+
+        // 배열의 값을 변수에 저장.
+        let text = "<ul>";
+
+        for(let i=0; i < fLen; i++) {
+            text += "<li>" + fruits[i] + "</li>";
+        }
+
+        text += "</ui>";
+
+        console.log(text); // 개발자 도구에서 확인가능함
+
+        document.getElementById("demo").innerHTML = text;
+
+    </script>
+</body>
+</html>

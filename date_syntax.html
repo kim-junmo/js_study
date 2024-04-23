@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Date() 날짜 기능 제공</h2>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+        const d = new Date() // 매개변수 위치에 값을 생략하면, 컴퓨터의 날짜/시간 정보를 읽어온다.
+        const d2 = new Date("2024-08-16");
+        const d3 = new Date(10000000000); // mili second : 1초를 1000분의 1로 환산한 단위
+
+        document.getElementById("demo1").innerHTML = d;
+        document.getElementById("demo2").innerHTML = d2;
+        document.getElementById("demo3").innerHTML = d3;
+        // 1970년 1월 1일 00:00:00초부터 10000000000 밀리세컨드까지 경과한 날짜
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript HTML Events</h1>
+<h2>The oninput Attribute</h2>
+
+    <!-- oninput이벤트 : 문자 1개 입력 시 이벤트가 발생된다.-->
+    <!-- onchange이벤트 : 문자들을 입력을 한 후 포커시를 이동해야 이벤트가 발생된다. -->
+    <!-- oninput → onchange로 꼭 변경을 해보면서 익혀야 된다. -->
+
+Enter your name: <input type="text" id="fname" oninput="upperCase()"><br>
+Enter your name: <input type="text" id="lname"><br>
+<p>When you write in the input field, a function is triggered to transform the input to upper case.</p>
+
+<script>
+document.getElementById("lname").oninput = upperCase2;
+
+function upperCase2() {
+  const x = document.getElementById("lname");
+  x.value = x.value.toUpperCase();
+}
+
+
+function upperCase() {
+  const x = document.getElementById("fname");
+  x.value = x.value.toUpperCase(); //toUpperCase(); 입력텍스트 상자의 값을 대문자로 변환
+}
+</script>
+
+</body>
+</html>

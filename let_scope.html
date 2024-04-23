@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>let 키워드 변수 영역</p>
+    <script>
+        // 블럭안에서 선언한 let키워드로 선언한 변수는 다른 위치에서는 사용 불가능.
+        {
+            let x = 2;
+            var y = 2;
+        }
+
+        
+        document.write(y);
+        document.write(x);
+    </script>
+</body>
+</html>

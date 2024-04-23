@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>함수안의 전역변수(Global Variable)</h3>
+
+    <p id ="demo1"></p>
+    <p id ="demo2"></p>
+
+    <script>
+        let carName = "volvo"; //전역변수
+        let text = "전역변수 : " + carName; //carName이 인식이 안됨
+        document.getElementById("demo1").innerHTML = text;
+
+
+        function myfunction() {
+            document.getElementById("demo2").innerHTML = carName;
+
+        }
+
+        myfunction();
+
+    </script>
+</body>
+</html>

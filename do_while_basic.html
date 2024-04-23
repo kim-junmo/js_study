@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>반복문 : do while</h2>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    
+    <script>
+        let text = ""; // 변수 용도
+        let i = 0;
+
+        //  do 안의 코드는 최소 1번 실행이 된다
+        do{
+            text += "<br>The number is " + i; // text = text + "<br>The number is " + i
+            i++;
+        }while(i < 0); //while(조건식)
+
+        document.getElementById("demo").innerHTML = text;
+        
+        document.write("1의 값?" + i);
+
+        i = 0;
+        text = "";
+
+        while(i < 0) {
+            text += "<br>The number is " + i;
+            i++;
+        }
+
+        
+        document.getElementById("demo2").innerHTML = text;
+
+        
+    </script>
+</body>
+</html>

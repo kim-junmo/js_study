@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>배열(array)을 공부하자</h2>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+        //배열 선언 (정의)
+        /*
+        let car1 = "saab"
+        let car2 = "Volvo"
+        let car3 = "BMW"
+
+        설명 : 자동차 모델의 데이터를 기억장소(변수)를 3개로 선언
+        */
+        //배열 : 하나의 큰 연속적인 기억장소로 관리. (구성 : 3개)
+        
+        const cars = ["saab", "Volvo", "BMW"];
+
+        document.getElementById("demo1").innerHTML = cars;
+
+        document.getElementById("demo2").innerHTML = cars[0]; // "saab"
+        document.getElementById("demo3").innerHTML = cars[1]; // "Volvo"
+        document.getElementById("demo4").innerHTML = cars[2]; // "BMW"
+
+        document.getElementById("demo5").innerHTML = cars[3]; 
+    </script>
+</body>
+</html>

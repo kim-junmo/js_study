@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>string 데이터타입을 Number 데이터타입으로 형변환</h2>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+
+    <script>
+        //매개변수의 값이 number데이터타입으로 변환이 안될 경우 NaN으로 값이 출력된다.
+
+        let num1 = 10;
+        document.getElementById("demo1").innerHTML = Number("10");
+        document.getElementById("demo2").innerHTML = Number("10.23");
+
+        // 1970.01.01 00:00:00 컴퓨터에서 날짜 및 시간을 계산할 때 기준하는 날짜 및 시간
+        document.getElementById("demo3").innerHTML = Number(new Date ("1970-01-01")); 
+
+        document.getElementById("demo4").innerHTML = parseInt("10"); //10
+        document.getElementById("demo5").innerHTML = parseInt("10.33"); //10 소수점을 절삭
+
+        document.getElementById("demo6").innerHTML = parseFloat("10") //10
+        document.getElementById("demo7").innerHTML = parseFloat("10.33") //10.33
+    </script>
+</body>
+</html>

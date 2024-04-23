@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>foreach문을 이용한 배열(array)작업</h2>
+    <p id="demo"></p>
+
+    <script>
+        const fruits = ["바나나", "오렌지", "사과", "망고", "포도"];
+
+        let text = "<ul>";
+            fruits.forEach(myFunction); // fruits.forEach(함수명);
+            text += "</ul>"
+
+            document.getElementById("demo").innerHTML = text;
+
+            function myFunction(value) { //function 위와 동일한 함수명(value) 
+                text += "<il>" + value + "</il>"
+            }
+    </script>
+</body>
+</html>

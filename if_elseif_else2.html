@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>등급표</h1>
+
+    <p id="result"></p>
+
+    <script>
+        let result = 80
+
+        if(result < 90) {
+            result = "A";
+        } else if(result < 80) {
+            result = "B";
+        } else if(result < 70) {
+            result = "C";
+        } else {
+            result = "F";
+        }
+
+        document.getElementById("result").innerHTML = result;
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>함수 정의(선언)하기.</h3>
+    <p>매개변수를 통한 리턴이 있는 함수</p>
+
+    <p id="result1"></p>
+    <p id="result2"></p>
+
+
+    <script>
+        //1. 두개의 수를 제공받아, 더한 결과를 리턴해주는 기능.
+        //return : 함수를 호출한 쪽으로 보내줌
+        function add(num1, num2) {//let var과 같은 태그를 사용하지 않음
+
+            let result = num1 + num2
+
+            return result;
+        }
+
+        document.getElementById("result1").innerHTML = add(1, 2);
+        document.getElementById("result2").innerHTML = add(3, 4);
+    </script>
+</body>
+</html>

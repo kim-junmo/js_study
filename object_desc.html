@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>object 데이터 타입</h2>
+    <p>일반변수와 object 데이터 타입의 차이 및 설명</p>
+
+    <script>
+        // 객체 : 자동차
+        //설명 : 자동차의 주요정보(데이터)를 관리하는 표현법.
+
+        // 가) 변수이용 → 개별적으로 관리할 수 있음
+        // 1. 변수를 정해서 값을 저장함
+        let name = "Flat";
+        let model = 500;
+        let weight = 850;
+        let color = "white";
+
+        // 2. 출력을 하여 값을 읽음
+        document.write("자동차이름: " + name + "<br>");
+        document.write("자동차모델: " + model + "<br>");
+        document.write("자동차무게: " + weight + "<br>");
+        document.write("자동차색깔: " + color + "<br>");
+
+        //3. 값 변경
+        color = "red";
+
+        // 나) object 이용. 값을 저장장소에 저장 → 구조적으로 관리할 수 있음
+        const car = {name:"Flat", model:500, weight:850, color:"white"};
+
+        //1) 출력 : 값읽기
+        document.write("자동차이름: " + car["name"] + "<br>");
+        document.write("자동차모델: " + car["model"] + "<br>");
+        document.write("자동차무게: " + car.weight + "<br>");
+        document.write("자동차색깔: " + car.color + "<br>");
+
+        //2) 값 변경
+        car.color = "red";
+    </script>
+</body>
+</html>

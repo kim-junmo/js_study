@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> + 더하기 연산기호의 사용법</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+        let a =  5 + 2 + 3; // 사칙연산의 더하기 기능
+        document.getElementById("demo1").innerHTML = a;
+
+        let b = "홍" + " " + "길동"; // 문자열 연결(결합)
+        document.getElementById("demo2").innerHTML = b;
+
+        let c = "5" + 2 + 3; // "523"
+        document.getElementById("demo3").innerHTML = c;
+
+        let d = 2 + 3 + "5"; // "55"
+        document.getElementById("demo4").innerHTML = d;
+
+        
+    </script>
+</body>
+</html>

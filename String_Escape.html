@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Escape 문자</h2>
+    <p>역슬래시와 문자를 조합하여, 문자열 내에서 효과 목적으로 가능을 정의</p>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    <script>
+        let text = "We are the so-called \"Vikings\" from the north.";
+        let text2 = 'it\'s alright.';
+        let text3 = "The character \\ is called backslash.";
+        // 역슬래쉬를 \\ 사용하면 하나로 인식함
+        let text4 = "홍\t\t\t\t길\t\t\t\t동"  //\t는 탭키 효과를 지니고 있음
+
+        document.getElementById("demo").innerHTML = text;
+        document.getElementById("demo2").innerHTML = text2;
+        document.getElementById("demo3").innerHTML = text3;
+        document.getElementById("demo4").innerHTML = text4;
+
+        alert ("가\n나\n다") // \n은 엔터키의 효과를 볼 수 있음
+    </script>
+</body>
+</html>

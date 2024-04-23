@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>이벤트 설정(등록)</h2>
+    <p>onclick 속성을 이용한 방식</p>
+
+    <p id="demo"></p>
+    <button id="myBtn">현재시간</button>
+
+    <script>
+
+        //이벤트 등록(설정) 버튼태그를 건들지 않고 설정을 할 것임
+        document.getElementById("myBtn").onclick = displayDate;  // displayDate() 절대 괄호 사용하지 말것.
+
+        function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+    </script>
+</body>
+</html>

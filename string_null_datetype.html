@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>string "" vs null 차이</h2>
+    <p id="demo1"></p>
+    <p id ="demo2"></p>
+
+    <script>
+        let x = "";
+        let y = null;
+
+        document.getElementById("demo1").innerHTML = typeof x; // 길이가 0인 문자열데이터 저장을 의미한다.
+        document.getElementById("demo2").innerHTML = typeof y; // 아무것도 존재하지 않는 상태를 의미한다.
+    </script>
+</body>
+</html>

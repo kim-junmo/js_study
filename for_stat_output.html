@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>for문으로 별 출력하기</p>
+
+    <h3> 정사각형 별</h3>
+    <p id="result1"></p>
+    
+    <h3>삼각형 별</h3> 
+    <p id="result2"></p>
+
+    <script>
+        /*
+        i가 0이였을 때, j는 5미만 (0~4)까지 5번 반복한다.
+        i가 1이였을 때, j는 5미만 (0~4)까지 5번 반복한다.
+        i가 2이였을 때, j는 5미만 (0~4)까지 5번 반복한다.
+        i가 3이였을 때, j는 5미만 (0~4)까지 5번 반복한다.
+        i가 4이였을 때, j는 5미만 (0~4)까지 5번 반복한다.
+        */
+        let star = "";
+        for(let i=0; i<5; i++) { // i=0은 한번만 출력됨, 0<5보다 작으니 아래 j로 출력됨 
+            for(let j=0; j<5; j++) { //이 작업이 총 5번 작업이 진행이 되 총 25개의 별이 나옴
+                star += "*";
+            }
+            star += "<br>";
+        }
+
+        document.getElementById("result1").innerHTML = star;
+
+        star = ""; // 별 정보 삭제.
+
+        /*
+        i = 0, j = 1번 출력
+        i = 1, j = 2번 출력
+        i = 2, j = 3번 출력
+        i = 3, j = 4번 출력
+        i = 4, j = 5번 출력
+        */
+
+        for(let i=0; i<5; i++) {
+            for(let j=0; j<=i; j++) {
+                star += "*";
+            }
+            star += "<br>";
+        }
+
+        document.getElementById("result2").innerHTML = star;
+    </script>
+</body>
+</html>

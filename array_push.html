@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>배열(Array)에 마지막 위치에 데이터 추가하기.</h2>
+    <p id="demo"></p>
+
+    <button onclick="myFunction()">클릭</button>
+
+    <script>
+
+        const fruits = ["바나나", "오렌지", "사과", "망고"];
+
+        document.getElementById("demo").innerHTML = fruits;
+
+        function myFunction() {
+            fruits.push("포도", "레몬", "딸기");
+            document.getElementById("demo").innerHTML = fruits;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 840px;
+        }
+    
+        th{
+            background-color: darkgray; 
+            border:1px solid black; border-collapse: collapse;
+            width: 150px;
+            padding: 10px,px,10px,5px;
+        }
+        
+        td{
+            padding-left: 5px;
+        }
+        section.sec1{
+            border: 0.1px solid gray; border-collapse: collapse;
+            padding: 15px;
+        }
+        section.sec2{
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        .textbox{
+            width:170px;
+        }
+        .textbox2{
+            width:635px;
+        }
+        
+        </style>
+        <script>
+
+            function sendit() {
+                
+                //정규식 문법 적용 : 정규식 패턴을 만드는 규칙은 /정규식 패턴/을 사용해야됨
+                // 정규식 패턴 중 /a[패턴]/이면 첫 글자가 a여야됨
+                // 정규식 플래그 : /{}/플래그
+                let regName = /[a-zA-Z가-힣]/;
+                let regid = /[a-zA-Z0-9]{6,12}/;
+                let regpw = /^[a-zA-Z0-9.!@#$%^&*]{6,12}$/;
+                let regEmail = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+                //let uid = document.getElementById("uid"); → uid 2개는 상관이 없음 달라도 됨, 이왕이면 동일한게 작업할때 편리함
+                
+                let uName = document.getElementById("uName");
+                let uId = document.getElementById("uId");
+                let uPass = document.getElementById("uPass");
+                let uCheckPw = document.getElementById("uCheckPw");
+
+                alert("체크");
+
+                //이름 필드에 데이터가 존재하면 false, 데이터가 없으면 true
+                if(uName.value == "") {
+                    alert("이름을 입력하세요.");
+                    uName.focus();
+                    return false;
+                }
+
+                if(uId.value == "") {
+                    alert("아이디를 입력하세요.");
+                    uId.focus();
+                    return false;
+                }
+
+                if(uPass.value == "") {
+                    alert("비밀번호를 입력하세요.");
+                    uPass.focus();
+                    return false;
+                }
+
+                // 비밀번호 확인
+                if(uPass.value != uCheckPw.value) {
+                    alert("비밀번호 재확인 하세요");
+                    uCheckPw.value = ""; // 재확인용 비밀번호를 다르게 작성했으면 지워줌
+                    uCheckPw.focus();
+                    return false;
+                }
+                
+
+                return true;
+            }
+            
+        </script>
+</head>
+<body>
+    <!--onsubmit form태그 안에서 submit이라는 버튼을 클릭한 순간에 submit의 버튼을 인식함-->
+    <form name="join" id="join" action="" method="post" onsubmit="return sendit()">
+        <section class="sec1">
+            <div style="float:left;width: 530px;display:inline;"><b>기본정보</b></div>
+            <div style="text-align:right;width:280px;display:inline;">&#10004; 표시 항목은 필수 입력 항목입니다.</div>
+            <table style="width: 100%;">
+            <tr>
+                <th>&#10004; 이름</th>
+                <td> <input type="text" class="textbox" id="uName" name="uName"></td>
+            </tr>
+            <tr>
+                <th>&#10004; 아이디</th>
+                <td> 
+                    <input type="text" class="textbox" id="uId" name="uId"> 
+                    <input type="submit" value="&#10004; 아이디 중복 확인"><br>
+                    &#x1F4AC; 6~16자까지 영문자(소문자),숫자 사용 가능합니다.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3자리 연속 또는 같은 문자, 아이디는 사용하실 수 있습니다.
+                </td>
+            </tr>
+            <tr>
+                <th>&#10004; 비밀번호</th> 
+                <td>
+                    <input type="password" class="textbox" id="uPass" name="uPass"><br>
+                    &#x1F4AC; 6~16자까지 영문자(대소문자),숫자 및 특수문자 사용 가능합니다.<br>
+                
+                </td>
+            </tr>
+            <tr>
+                <th>&#10004; 비밀번호 확인</th>
+                <td> <input type="password" class="textbox" id="uCheckPw" name="uCheckPw"> 비밀번호가 일치합니다.</td>
+            </tr>
+            <tr>
+                <th>&#10004; 생년월일/성별</th>
+                <td>
+                    <input type="text" class="textbox" id="uBirth" name="uBirth">&#x1F4C5;
+                    <input type="radio" id="uMen" name="sex" value="male"><label for="uMen">남자</label>
+                    <input type="radio" id="uWomen" name="sex" value="female"><label for="uWomen">여자</label>
+                </td>
+            </tr>
+            <tr>
+                <th>&#10004; 이메일</th>
+                <td>
+                    <input type="text" class="textbox" id="uEmail1" name="uEmail1">&nbsp;@
+                    <input type="text" class="textbox" id="uEmail2" name="uEmail2">
+                    <select id="emailSelect" onchange="choiceMail(this);">
+                        <option value="">메일주소선택</option>
+                        <option value="hanmail.net">hanmail.net</option>
+                        <option value="naver.com">naver.com</option>
+                    </select>
+                    <input type="button" value="&#10004; 인증코드 발송"><br>
+                    <input type="text" class="textbox" id="num1" name="num1" value=""> 
+                    <input type="button" value="&#10004; 인증확인">
+                    
+                </td>
+            </tr>
+            <tr>
+                <th>&#10004; 연락처</th>
+                <td>
+                    휴대전화 <input type="text" id="uTel" name="uTel" style="width: 180px;">
+                    
+                    
+                </td>
+            </tr>
+            <tr>
+                <th>&#10004; 우편번호</th>
+                <td><input type="text" id="sample2_postcode" placeholder="우편번호"> 
+                    <input type="button" value="&#x1F50D; 주소검색" onclick="sample2_execDaumPostcode()"></td>
+                    <input type="hidden" id="sample2_extraAddress" placeholder="참고항목">
+                    
+            </tr>
+            
+            <tr>
+                <th>&#10004; 주소</th>
+                <td><input type="text" id="sample2_address" placeholder="주소"><br>
+                    <input type="text" id="sample2_detailAddress" placeholder="상세주소"></td>
+            </tr>
+            <tr>
+                <th> 정보수신 여부</th>
+                <td>서비스 및 이벤트 소식을 
+                    <input type="checkbox" id="uReEmail" name="uReEmail">Email로 수신하겠습니다. 
+                    <input type="checkbox" id="uReSms" name="uReSms">SMS로 수신하겠습니다.</td>
+            </tr>
+        </table>
+    </section>    
+    <section class="sec2">
+        <h>
+            <input type="reset" value="취소" style="background-color: white;">
+            <input type="submit" value="회원가입" style="background-color: red; color: white;">
+            <!--유효성 검사 자바 스크립트 함수를 호출하는 방법-->
+            <!--1. input="submit" 일 경우에는 onclick을 사용하면 안된다. <form onsubmit="return 함수()"-->
+            <!--input="button" 일 경우에는 onclick을 사용해야 된다-->
+        </h>
+    </section>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>조건문 : if~else문</h1>
+    <p id="demo"></p>
+
+    <script>
+        /*
+        new data () : 시스템의 날짜 및 시간 정보를 읽어오는 기능
+        */
+        let hour = new Date ().getHours ();
+
+        //hour += 10;
+
+        console.log("hour", hour); //개발자 도구
+
+        if(hour < 18) {
+            document.getElementById("demo").innerHTML = "Good day!";//true 일 경우 동작
+        }else {
+            document.getElementById("demo").innerHTML = "Good Evening";//false 일 경우 동작
+        }
+    </script>
+</body>
+</html>

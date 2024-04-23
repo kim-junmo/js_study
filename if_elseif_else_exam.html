@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>성적에 따른 등급 매기기</h2>
+    <p id="result"></p>
+
+    <script>
+        let jumsu = prompt("당신의 성적은?", "점수를 입력하세요.");
+        let grade;
+
+        if(jumsu >= 90) {
+            grade = "A";
+        } else if(jumsu >= 80) {
+            grade = "B";
+        } else if(jumsu >= 70) {
+            grade = "C";
+        } else {
+            grade = "F";
+        }
+
+        document.getElementById("result").innerHTML = grade;
+    </script>
+</body>
+</html>

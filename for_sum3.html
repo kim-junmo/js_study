@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>1~100범위에서 짝수의 합을 출력하라</p>
+    <p id="demo"></p>
+
+    <script>
+        let sum = 0;
+
+        // underfined 값으로 연산 결과가 Nuh이 된다
+        // let sum;
+        let i = 0 // 변수를 for문에서 선언하면, for문이 종료된 이후에는 사용 불가능
+        for(; i <= 100; i++) {
+            if(i % 2 == 0) {
+                sum += i; // 0 + 1
+            }
+        }
+
+        document.write(i);
+
+        document.getElementById("demo").innerHTML = sum;
+    </script>
+</body>
+</html>
